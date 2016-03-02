@@ -1,0 +1,25 @@
+
+
+import java.util.Scanner;
+public class PGRM1 {
+	public static void main(String[] args) {
+		int n1, n2, n3;
+		System.out.println("This program will total the amount of tuition based on cost per credit and amount of credits being taken");
+		System.out.println("what is the cost per credit in dollars?");
+		Scanner keyboard = new Scanner(System.in);
+		n1 = keyboard.nextInt();
+		System.out.println("how many credits are you taking?");
+		n2 = keyboard.nextInt();
+		n3 = (n1*n2);
+		System.out.println("When the cost per credit is" + " "+n1+ " " + "dollars");
+		System.out.println("and the amount of credits being taken is" + " " +n2);
+		System.out.println("The total cost of tuition for the semester is" + " " + n3 + " " + " dollars.");
+		
+		
+		
+
+	}
+	
+	
+
+}
