@@ -1,0 +1,85 @@
+import java.text.DecimalFormat;
+import java.util.Scanner;
+
+/**
+ * 
+ * @author Gregory K Hancock
+ * @version 1.0
+ *
+ */
+
+public class BasicCalc2 {
+
+	private static DecimalFormat df2 = new DecimalFormat(".##");
+
+	/**
+	 * This is a basic calculator program
+	 * 
+	 * @param args
+	 */
+
+	public static void main(String[] args) {
+
+		System.out.println(
+				"Type number according to desired function. | 1 Addition | 2 Subtraction | 3 Multiplication | 4 Division | 5 Power | 6 Square Root | ");
+		Scanner keyboard = new Scanner(System.in);
+		int role = keyboard.nextInt();
+
+		switch (role) {
+		case 1:
+			System.out.println("Addition");
+			System.out.println("What is your first number?");
+			double n1 = keyboard.nextDouble();
+			System.out.println("Add what value?");
+			double n2 = keyboard.nextDouble();
+			double n3 = (n1 + n2);
+			System.out.println(n1 + " " + "+" + " " + n2 + " " + "=" + " " + n3);
+			break;
+		case 2:
+			System.out.println("Subtraction");
+			System.out.println("What is your first number?");
+			double n4 = keyboard.nextDouble();
+			System.out.println("Subtract what value?");
+			double n5 = keyboard.nextDouble();
+			double n6 = (n4 - n5);
+			System.out.println(n4 + " " + "-" + " " + n5 + " " + "=" + " " + n6);
+			break;
+		case 3:
+			System.out.println("Multiplication");
+			System.out.println("What is your first number?");
+			double n7 = keyboard.nextDouble();
+			System.out.println("Multiplied by what value?");
+			double n8 = keyboard.nextDouble();
+			double n9 = (n7 * n8);
+			System.out.println(n7 + " " + "x" + " " + n8 + " " + "=" + " " + n9);
+			break;
+		case 4:
+			System.out.println("Division");
+			System.out.println("What is your first number?");
+			double n10 = keyboard.nextDouble();
+			System.out.println("Divided by what value?");
+			double n11 = keyboard.nextDouble();
+			double n12 = (n10 / n11);
+			System.out.println(n10 + " " + "/" + " " + n11 + " " + "=" + " " + n12);
+			break;
+		case 5:
+			System.out.println("Power");
+			System.out.println("What is your first number?");
+			double n13 = keyboard.nextDouble();
+			System.out.println("Raised to what power?");
+			double n14 = keyboard.nextDouble();
+			double n15 = Math.pow(n13, n14);
+			System.out.println(n13 + "^" + n14 + " " + "=" + " " + n15);
+			break;
+		case 6:
+			System.out.println("Square Root");
+			System.out.println("What is your number?");
+			double n16 = keyboard.nextDouble();
+			double n17 = (Math.sqrt(n16));
+			System.out.println("The square root of" + " " + n16 + " " + "=" + " " + n17);
+			break;
+		}
+
+	}
+
+}
