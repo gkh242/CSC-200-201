@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Assignment1 {
+	public static void main(String[] args) {
+
+		double n1, n2, n3;
+		System.out.println("This program will calculate the total cost of an item with Virginia sales tax.");
+
+		System.out.println("What is the cost of the item before tax?");
+		Scanner keyboard = new Scanner(System.in);
+		n1 = keyboard.nextInt();
+		n2 = (n1 * .05);
+		n3 = (n1 + n2);
+		System.out.println("the total cost is" + " " + n3 + " " + "dollars");
+	}
+
+}
