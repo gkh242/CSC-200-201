@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class BasicCalc2 {
 
+	@SuppressWarnings("unused")
 	private static DecimalFormat df2 = new DecimalFormat(".##");
 
 	/**
@@ -22,6 +23,7 @@ public class BasicCalc2 {
 
 		System.out.println(
 				"Type number according to desired function. | 1 Addition | 2 Subtraction | 3 Multiplication | 4 Division | 5 Power | 6 Square Root | ");
+		@SuppressWarnings("resource")
 		Scanner keyboard = new Scanner(System.in);
 		int role = keyboard.nextInt();
 
@@ -46,7 +48,7 @@ public class BasicCalc2 {
 			break;
 		case 3:
 			System.out.println("Multiplication");
-			System.out.println("What is your first number?");
+			System.out.println("What number would you like to multiply?");
 			double n7 = keyboard.nextDouble();
 			System.out.println("Multiplied by what value?");
 			double n8 = keyboard.nextDouble();
@@ -55,7 +57,7 @@ public class BasicCalc2 {
 			break;
 		case 4:
 			System.out.println("Division");
-			System.out.println("What is your first number?");
+			System.out.println("What number would you like to divide?");
 			double n10 = keyboard.nextDouble();
 			System.out.println("Divided by what value?");
 			double n11 = keyboard.nextDouble();
@@ -64,7 +66,7 @@ public class BasicCalc2 {
 			break;
 		case 5:
 			System.out.println("Power");
-			System.out.println("What is your first number?");
+			System.out.println("What number would you like to raise to x power?");
 			double n13 = keyboard.nextDouble();
 			System.out.println("Raised to what power?");
 			double n14 = keyboard.nextDouble();
@@ -73,7 +75,7 @@ public class BasicCalc2 {
 			break;
 		case 6:
 			System.out.println("Square Root");
-			System.out.println("What is your number?");
+			System.out.println("number would you like to find the square root of?");
 			double n16 = keyboard.nextDouble();
 			double n17 = (Math.sqrt(n16));
 			System.out.println("The square root of" + " " + n16 + " " + "=" + " " + n17);
