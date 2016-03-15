@@ -1,0 +1,24 @@
+
+
+public class IfElse {
+
+	public static void main(String[] args) {
+		int limit = 28;
+		int students;
+
+		System.out.println("This program will calculate whether a class is open or closed");
+
+		System.out.println("How many students are enrolled in the class?");
+		Scanner keyboard = new Scanner(System.in);
+		students = keyboard.nextInt();
+
+		if (students < 28) {
+			System.out.println("The class is OPEN.");
+			System.out.println("The amount of spaces left are"+" "+(limit-students));
+		} else {
+			System.out.println("the class is full");
+		}
+		System.out.println("");
+	}
+
+}
