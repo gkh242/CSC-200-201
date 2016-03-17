@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class WeeklySalary {
+	public static void main(String[] args) {
+		System.out.println("This program will compute someone's weekly salary");
+		int bonus = 500;
+		System.out.println("how many hours did you work this week?");
+		Scanner keyboard = new Scanner(System.in);
+		int hours = keyboard.nextInt();
+		System.out.println("What is your hourly pay?");
+		double pay = keyboard.nextInt();
+		double WeeklySalary = (hours * pay);
+		if (hours >= 50){
+			System.out.println("your weekly salary is"+" "+"$"+(WeeklySalary+bonus));
+		} else {
+			System.out.println("your weekly salary is"+" "+"$"+(WeeklySalary));
+		}
+		
+	}
+}
