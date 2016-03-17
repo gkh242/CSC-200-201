@@ -22,21 +22,36 @@ public class BasicCalc2 {
 	public static void main(String[] args) {
 
 		System.out.println(
-				"Type number according to desired function. | 1 Addition | 2 Subtraction | 3 Multiplication | 4 Division | 5 Power | 6 Square Root | ");
+				"Type number according to desired function");
+		System.out.println("| 1 Addition | 2 Subtraction | 3 Multiplication | 4 Division | 5 Power | 6 Square Root | 7 Average |");
+		
 		@SuppressWarnings("resource")
 		Scanner keyboard = new Scanner(System.in);
 		int role = keyboard.nextInt();
 
 		switch (role) {
+//		case 11:
+//			System.out.println("Addition");
+//			System.out.println("What is your first number?");
+//			double n1 = keyboard.nextDouble();
+//			System.out.println("Add what value?");
+//			double n2 = keyboard.nextDouble();
+//			double n3 = (n1 + n2);
+//			System.out.println(n1 + " " + "+" + " " + n2 + " " + "=" + " " + n3);
+//			break;
 		case 1:
-			System.out.println("Addition");
-			System.out.println("What is your first number?");
-			double n1 = keyboard.nextDouble();
-			System.out.println("Add what value?");
-			double n2 = keyboard.nextDouble();
-			double n3 = (n1 + n2);
-			System.out.println(n1 + " " + "+" + " " + n2 + " " + "=" + " " + n3);
-			break;
+			System.out.println("Addition"); {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("enter how many numbers you want to add");
+			int totalCount = sc.nextInt();
+			double sum = 0;
+
+			for (int i = 0; i < totalCount; i++) {
+				System.out.print("Please enter a number: ");
+				sum += sc.nextDouble();
+			}
+			System.out.println("The sum of these numbers is" + " " + (sum));
+		}
 		case 2:
 			System.out.println("Subtraction");
 			System.out.println("What is your first number?");
@@ -46,6 +61,19 @@ public class BasicCalc2 {
 			double n6 = (n4 - n5);
 			System.out.println(n4 + " " + "-" + " " + n5 + " " + "=" + " " + n6);
 			break;
+//		case 22:
+//			System.out.println("Subtraction"); {
+//			Scanner sc = new Scanner(System.in);
+//			System.out.print("enter how many numbers you want to subtract");
+//			int totalCount = sc.nextInt();
+//			double difference = 0;
+//
+//			for (int i = 0; i < totalCount; i++) {
+//				System.out.print("Please enter a number: ");
+//				difference -= sc.nextDouble();
+//			}
+//			System.out.println("The difference of these numbers is" + " " + (difference));
+//		}
 		case 3:
 			System.out.println("Multiplication");
 			System.out.println("What number would you like to multiply?");
@@ -80,6 +108,19 @@ public class BasicCalc2 {
 			double n17 = (Math.sqrt(n16));
 			System.out.println("The square root of" + " " + n16 + " " + "=" + " " + n17);
 			break;
+		case 7:
+			System.out.println("Average"); {
+			Scanner sc = new Scanner(System.in);
+			System.out.print("enter how many numbers you want to average");
+			int totalCount = sc.nextInt();
+			double sum = 0;
+
+			for (int i = 0; i < totalCount; i++) {
+				System.out.print("Please enter a number: ");
+				sum += sc.nextDouble();
+			}
+			System.out.println("The average of the numbers is" + " " + (sum / totalCount));
+		}
 		}
 
 	}
