@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Register {
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+
+		System.out.println("Were you placed into Eng 111 or higher?  Enter true or false.");
+		boolean placedIntoEnglish = keyboard.nextBoolean();
+
+		System.out.println("Were you placed into Mth 163 or higher?  Enter true or false.");
+		boolean placedIntoMath = keyboard.nextBoolean();
+
+		if (placedIntoEnglish == true && placedIntoMath == true) {
+			System.out.println("you are eligible to register for CSC 200.");
+		} else {
+			System.out.println("You are not eligible for CSC 200.");
+			if (placedIntoEnglish == false) {
+				System.out.println("You are not eligible due to your English placement.");
+			}
+			if (placedIntoMath == false) {
+				System.out.println("You are not eligible due to your Math placement.");
+			}
+		}
+	}
+}
