@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Assignment4 {
+	public static void main(String[] args) {
+		System.out.println(
+				"This program will tell you which movie ratings are appropiate for your family according to the (CARA)");
+		System.out.println("What age is the movie go-er?");
+		Scanner keyboard = new Scanner(System.in);
+		int movieGoEr = keyboard.nextInt();
+		if (movieGoEr >= 0) {
+			if (movieGoEr >= 17) {
+				System.out.println("G, PG, PG13, and R rated movied are appropiate.");
+			}
+			if (movieGoEr >= 13 && movieGoEr < 17) {
+				System.out.println("G, PG and rated PG13 movies are appropiate.");
+			}
+			if (movieGoEr >= 5 && movieGoEr < 13) {
+				System.out.println("G and PG rated movies are appropiate.");
+			}
+			if (movieGoEr >= 0 && movieGoEr < 5) {
+				System.out.println("G rated movies are appropiate.");
+			}
+
+		} else {
+			System.out.println("ERROR: The age entered is invalid.");
+		}
+	}
+}
