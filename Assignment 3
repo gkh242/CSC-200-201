@@ -1,0 +1,42 @@
+import java.util.Scanner;
+/**
+ * 
+ * @author Gregory K Hancock
+ * @version 1.0
+ *
+ */
+public class Assignment3 {
+	public static void main(String[] args) {
+		/**
+		 * This is a basic tax calculating program
+		 * 
+		 * @param args
+		 */
+		System.out.println("Hello, this program will calculate income tax for you based on your yearly income.");
+		System.out.println("How much money did you make during the year?");
+		Scanner keyboard = new Scanner(System.in);
+		int income = keyboard.nextInt();
+		
+		if (income > 100000){
+			System.out.println("Your tax bracket at a yearly salary of"+" "+income+" "+"is 40%." );
+			System.out.println("You owe"+" "+(income*.4)+".");
+			System.out.println("Your total after tax is"+" "+(income-(income*.4)));
+					}
+		if (income > 50000 && income <= 100000){
+			System.out.println("Your tax bracket at a yearly salary of"+" "+income+" "+"is 30%." );
+			System.out.println("You owe"+" "+(income*.3)+".");
+			System.out.println("Your total after tax is"+" "+(income-(income*.3)));
+					}
+		if (income > 10000 && income <= 50000){
+			System.out.println("Your tax bracket at a yearly salary of"+" "+income+" "+"is 20%." );
+			System.out.println("You owe"+" "+(income*.2)+".");
+			System.out.println("Your total after tax is"+" "+(income-(income*.2)));
+					}
+		if (income <= 10000){
+			System.out.println("Your tax bracket at a yearly salary of"+" "+income+" "+"is 10%." );
+			System.out.println("You owe"+" "+(income*.1)+".");
+			System.out.println("Your total after tax is"+" "+(income-(income*.1)));
+					}
+	}
+
+}
