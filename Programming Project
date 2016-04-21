@@ -1,0 +1,103 @@
+import java.util.Scanner;
+
+public class ProgrammingProject {
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+
+		System.out.println("This program will help compute your final percentage and grade for the CSC 200 course.");
+		double conceptTest1, programmingTest1, conceptTest2, programmingTest2, conceptTestFinal, programmingTestFinal,
+				programmingProject;
+
+		do {
+			System.out.println("What was your score for Concept Test 1?");
+			conceptTest1 = keyboard.nextDouble();
+			if (conceptTest1 < 0 || conceptTest1 > 100) {
+				System.out.println("Error the value entered must be 0 to 100");
+			}
+		} while (conceptTest1 < 0 || conceptTest1 > 100);
+		do {
+			System.out.println("What was your score for Programming Test 1?");
+			programmingTest1 = keyboard.nextDouble();
+			if (programmingTest1 < 0 || programmingTest1 > 100) {
+				System.out.println("Error the value entered must be 0 to 100");
+			}
+		} while (programmingTest1 < 0 || programmingTest1 > 100);
+		do {
+			System.out.println("What was your score for Concept Test 2?");
+			conceptTest2 = keyboard.nextDouble();
+			if (conceptTest2 < 0 || conceptTest2 > 100) {
+				System.out.println("Error the value entered must be 0 to 100");
+			}
+		} while (conceptTest2 < 0 || conceptTest2 > 100);
+		do {
+			System.out.println("What was your score for Programming Test 2?");
+			programmingTest2 = keyboard.nextDouble();
+			if (programmingTest2 < 0 || programmingTest2 > 100) {
+				System.out.println("Error the value entered must be 0 to 100");
+			}
+		} while (programmingTest2 < 0 || programmingTest2 > 100);
+		do {
+			System.out.println("What was your score for Concept Test Final?");
+			conceptTestFinal = keyboard.nextDouble();
+			if (conceptTestFinal < 0 || conceptTestFinal > 100) {
+				System.out.println("Error the value entered must be 0 to 100");
+			}
+		} while (conceptTestFinal < 0 || conceptTestFinal > 100);
+		if (conceptTestFinal > conceptTest1)
+			;
+
+		conceptTest1 = conceptTestFinal;
+		if (conceptTestFinal > conceptTest2)
+			;
+		conceptTest2 = conceptTestFinal;
+		do {
+			System.out.println("What was your score for Programming Test Final?");
+			programmingTestFinal = keyboard.nextDouble();
+			if (programmingTestFinal < 0 || programmingTestFinal > 100) {
+				System.out.println("Error the value entered must be 0 to 100");
+			}
+		} while (programmingTestFinal < 0 || programmingTestFinal > 100);
+		if (programmingTestFinal > programmingTest1)
+			;
+		programmingTest1 = programmingTestFinal;
+		if (programmingTestFinal > programmingTest2)
+			;
+		programmingTest2 = programmingTestFinal;
+		do {
+			System.out.println("What was your score for Programming Project?");
+			programmingProject = keyboard.nextDouble();
+			if (programmingProject < 0 || programmingProject > 100) {
+				System.out.println("Error the value entered must be 0 to 100");
+			}
+		} while (programmingProject < 0 || programmingProject > 100);
+
+		System.out.println("Okay, your values are valid.");
+
+		double cT1 = (conceptTest1 * .1);
+		double cT2 = (conceptTest2 * .1);
+		double cTF = (conceptTestFinal * .2);
+		double pT1 = (programmingTest1 * .1);
+		double pT2 = (programmingTest2 * .1);
+		double pTF = (programmingTestFinal * .2);
+		double PP = (programmingProject * .2);
+
+		double totalPercentage = (cT1 + cT2 + cTF + pT1 + pT2 + pTF + PP);
+		System.out.println("Your total percentage is " + totalPercentage + "%");
+		if (totalPercentage == 0) {
+			System.out.println("Your final letter grade is a F");
+		}
+		if (totalPercentage >= 1 && totalPercentage <= 69) {
+			System.out.println("Your final letter grade is a D");
+		}
+		if (totalPercentage >= 70 && totalPercentage <= 79) {
+			System.out.println("Your final letter grade is a C");
+		}
+		if (totalPercentage >= 80 && totalPercentage <= 89) {
+			System.out.println("Your final letter grade is a B");
+		}
+		if (totalPercentage >= 90 && totalPercentage <= 100) {
+			System.out.println("Your final letter grade is an A");
+		}
+		keyboard.close();
+	}
+}
