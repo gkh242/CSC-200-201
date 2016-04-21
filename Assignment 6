@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Assignment6 {
+	public static void main(String[]args){
+		Scanner keyboard = new Scanner(System.in);
+
+		System.out.println("This program will help you deterine your eligibility to vote in the upcoming election.");
+		String residentState, registeredState, citizen, execute;
+		int age;
+		
+		System.out.println("Would you like to check someone's eligibility to vote in the upcoming election? Enter Yes or No.");
+		execute = keyboard.nextLine();
+
+		switch (execute){
+		case "Yes":
+			System.out.println("What is the potential voter's age?");
+			age = keyboard.nextInt();
+			System.out.println("Is the potential voter a US citizen?");
+			citizen = keyboard.nextLine();
+			System.out.println("What state is the potential voter a citizen of?");
+			residentState = keyboard.nextLine();
+			System.out.println("Is the potential voter registered to vote in" + " "+ residentState+"?");
+			registeredState = keyboard.nextLine();
+			
+
+			break;
+		case "No":
+			System.out.println("Goodbye.");
+			break;
+		}
+	}
+
+}
