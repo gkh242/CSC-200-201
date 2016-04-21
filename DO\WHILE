@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class CE20160405 {
+	public static void main(String[] args) {
+		Scanner keyboard = new Scanner(System.in);
+
+		System.out.println("This program will allow you to divide one number by another.");
+		System.out.println("What is the numerator?");
+		double numerator = keyboard.nextDouble();
+		double denominator;
+		do {
+			System.out.println("What is the denominator?");
+			denominator = keyboard.nextDouble();
+			if (denominator == 0) {
+				System.out.println("ERROR, your denominator cannot be 0.");
+			}
+		} while (denominator == 0);
+		double quotient = (numerator / denominator);
+		System.out.println("your quotient is" + " " + quotient + ".");
+	}
+}
